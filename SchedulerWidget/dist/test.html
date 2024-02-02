@@ -1,0 +1,26 @@
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Your HTML Page</title>
+
+  <!-- Include the external CSS file -->
+  <link rel="stylesheet" href="AppointmentWidget.css" />
+</head>
+
+<body>
+  <div id="mywidget"></div>
+
+  <script src="https://flaxen-dear-hallway.glitch.me/SchedulerWidget.js"></script>
+  <script>
+    const widget = new SchedulerWidget({
+      target: document.getElementById("mywidget"),
+      props: {
+        notifyChanges: (formData) => {
+          console.log("Updated form data", formData);
+        },
+      },
+    });
+
+    console.log("widget data", widget.getFormData());
+  </script>
+</body>
