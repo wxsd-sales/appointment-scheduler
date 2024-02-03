@@ -12,6 +12,14 @@
   let widget = null;
 
   onMount(() => {
+    // Load the external script dynamically
+    const script = document.createElement('script');
+    script.src = 'https://socketeer.glitch.me/SchedulerWidget.js';
+    script.onload = initializeWidget;
+    document.head.appendChild(script);
+  });
+
+  function initializeWidget() {
     isWidgetLoaded = true;
     console.log("Widget is loaded");
     widget = new SchedulerWidget({
@@ -22,7 +30,7 @@
     });
 
     console.log(" widget.getFormData()", widget.getFormData());
-  });
+  }
 
   function updateWidgetData(widgetData) {
     console.log("widgetData", widgetData);
@@ -54,10 +62,6 @@
     disabled = !timeOfDay || !slotTime || !slotDate || !date;
   }
 </script>
-
-<svelte:head>
-  <script src="https://flaxen-dear-hallway.glitch.me/SchedulerWidget.js"></script>
-</svelte:head>
 
 <div id="mywidget"></div>
 <div class="buttons-container1">

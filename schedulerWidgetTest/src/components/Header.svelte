@@ -6,7 +6,7 @@
   <nav class="navbar is-fixed-top has-shadow custom-red" aria-label="main navigation">
     <div class="navbar-brand">
           <a class="navbar-item" href="{base}/">
-          <img class ="logo" src="/company-logo.png" alt="Delete Recording App" />
+          <img class ="logo" src="{base}/company-logo.png" alt="Delete Recording App" />
         </a>
 
       <button
