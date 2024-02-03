@@ -1,0 +1,1 @@
+export const env={"PUBLIC_COMPANY_NAME":"WXSD","PUBLIC_COMPANY_URL":"https://www.google.com/privacy-security/"}
